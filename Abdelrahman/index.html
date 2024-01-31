@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Inscription" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="index.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="flex justify-between px-3 py-6 gap-6 text-white || md:flex md:justify-between md:items-center">
+    <div class="logo flex items-start gap-4">
+      <img src="assets/logo.png" alt="logo" width="92" height="93" class="max-w-93 max-h-92" />
+      <h1>La boutique Eden Zero Dechet</h1>
+    </div>
+    <nav>
+      <ul class="flex flex-col gap-4 md:flex md:flex-row">
+        <li class="whitespace-nowrap">Nos Produits</li>
+        <li class="whitespace-nowrap">Se connecter</li>
+        <li class="whitespace-nowrap">S'inscrire</li>
+      </ul>
+    </nav>
+  </header>
+  <div class="registeration my-20 md:px-20 md:min-h-screen">
+    <div class="registeration-content px-4">
+      <h2 class="py-3 text-white md:text-3xl">Inscription</h2>
+      <form action="submit" novalidate class="md:px-10">
+        <div class="user-name grid grid-cols-1 gap-4 md:grid md:grid-cols-2 md:gap-20 md:items-center">
+          <div class="last-name flex flex-col items-start gap-2">
+            <label class="px-2" for="lastname">Nom</label>
+            <span id="lastname-error" class="error-message px-2">* Ce champs ne doit pas être vide</span>
+            <input class="min-w-full" type="text" name="lastname" id="lastname" aria-required="true" required />
+          </div>
+          <div class="first-name flex flex-col items-start gap-2">
+            <label for="firstname">Prenom</label>
+            <span id="firstname-error" class="error-message px-2">* Ce champ ne doit pas être vide</span>
+
+            <input class="min-w-full" type="text" name="firstname" id="firstname" aria-required="true" required />
+          </div>
+        </div>
+        <div class="user-email flex flex-col items-start gap-2 my-4">
+          <label for="email">Email</label>
+          <!-- <span id="email-error" class="error-message px-2">* Ce champ ne doit pas être vide</span> -->
+
+          <input class="min-w-full" type="email" name="email" id="email" aria-required="true" required />
+        </div>
+        <div class="user-address my-4 md:grid md:grid-cols-2 md:">
+          <div class="st-number flex flex-col items-start gap-2 my-4 md:">
+            <label for="stnumber">Numero</label>
+            <span id="stnumber-error" class="error-message px-2">* Ce champ ne doit pas être vide</span>
+
+            <input class="min-w-full md:min-w-20 items-start gap-3 input-number" type="number" name="stnumber" id="stnumber"
+              aria-required="true" required />
+          </div>
+          <div class="st-name flex flex-col items-start gap-2 my-4">
+            <label for="stname">Nom de rue</label>
+            <span id="stname-error" class="error-message px-2">* Ce champ ne doit pas être vide</span>
+            <input class="min-w-full" type="text" name="stname" id="stname" aria-required="true" required />
+          </div>
+          <div class="user-postal flex flex-col items-start gap-2 my-4">
+            <label class="whitespace-nowrap" for="postal">Code Postal</label>
+            <span id="postal-error" class="error-message px-2">* Ce champ ne doit pas être vide</span>
+
+            <input class="min-w-full md:min-w-20 input-number" type="number" name="postal" id="postal" aria-required="true" required />
+          </div>
+          <div class="user-city flex flex-col items-start gap-2 my-4">
+            <label for="city">Ville</label>
+            <span id="city-error" class="error-message px-2">* Ce champ ne doit pas être vide</span>
+
+            <select class="min-w-full p-3" type="text" name="city" id="city" aria-required="true" required>
+              <option value="">Choisissez une ville</option>
+            </select>
+          </div>
+        </div>
+        <div class="pass grid grid-cols-1 gap-2 my-4 md:grid md:grid-cols-2 md:gap-x-20">
+          <div class="flex flex-col items-start gap-2">
+            <label for="password">Mot de passe</label>
+            <input class="min-w-full password-invalid" type="password" name="password" id="password"
+              aria-required="true" required />
+          </div>
+          <div class="confirm-password flex flex-col items-start gap-2">
+            <label for="confirmpassword" class="whitespace-nowrap">Confirmer le mot de passe</label>
+            <input class="min-w-full confirm-password-invalid" type="password" name="confirmpassword"
+              id="confirmpassword" aria-required="true" required />
+          </div>
+          <div class="pass-requirment text-white flex flex-row my-4 md:my-2">
+            <ul class="text-justify">
+              <li class="whitespace-nowrap">Le mot de passe doit contenir:</li>
+              <li class="longchar">8 caractères</li>
+              <li class="chif">1 chiffre</li>
+              <li class="maj">1 majuscule</li>
+              <li class="charsp">1 caractère spécial</li>
+            </ul>
+          </div>
+        </div>
+        <button>S'enregistrer</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

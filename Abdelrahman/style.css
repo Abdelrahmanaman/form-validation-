@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #142b1b;
+}
+
+header h1 {
+  font-size: 16px;
+}
+
+header nav {
+  font-size: 25px;
+}
+
+.registeration-content h2 {
+  font-size: 32px;
+}
+
+.registeration-content {
+  background-color: #142b1b;
+  text-align: center;
+}
+
+form input {
+  background-color: #142b1b;
+  border: 1px solid #d4de6a;
+  padding: 0.75rem;
+  border-radius: 5px;
+  outline: none;
+  color: white;
+}
+
+form input:user-invalid {
+  border-color: red;
+}
+
+form input:focus {
+  background-color: white;
+  color: black;
+}
+
+form select {
+  background-color: #142b1b;
+  border: 1px solid #d4de6a;
+  color: white;
+  border-radius: 5px;
+  font-size: 22px;
+
+}
+
+form label {
+  color: white;
+  padding-left: 1rem;
+  font-size: 22px;
+}
+
+form button {
+  background-color: #25751c;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: white;
+  border-radius: 4px;
+  font-size: 24px;
+}
+
+form button:hover {
+  cursor: pointer;
+  background-color: #1a4e14;
+}
+
+.pass-requirement {
+  font-size: 16px;
+}
+
+.error-message {
+  color: red;
+  font-size: 22px;
+}
+
+
+.input-number::-webkit-outer-spin-button,
+.input-number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
